@@ -17,7 +17,6 @@ class CashRegister
   def add_item(item, cost, number = 1)
     self.total += (cost * number)
     number.times {@items << item}
-    last_item = 
   end
 
   def apply_discount
@@ -35,7 +34,7 @@ class CashRegister
   end
 
   def void_last_transaction
-
+    last_item = @items[@items.count - 1]
   end
 
 end
